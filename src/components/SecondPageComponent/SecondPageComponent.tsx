@@ -16,7 +16,7 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   return (
     <div className='SecondPageComponent'>
       <span id='arrow-span'>
-        <a href='/index.html'>
+        <button onClick={onButtonClick}>
           <img
             src='/media/pixel-arrow-left.png'
             className='arrow-left'
@@ -24,7 +24,7 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
             width='100px'
             alt='Back Arrow'
           />
-        </a>
+        </button>
       </span>
       <img
         src='/media/sad-cat.png'
