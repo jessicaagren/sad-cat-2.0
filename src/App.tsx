@@ -1,10 +1,10 @@
 import './App.scss';
-import FirstPageComponent from './components/FirstPageComponent/FirstPageComponent';
+import Main from './components/Main/Main';
 
 function App() {
   return (
     <>
-      <FirstPageComponent />
+      <Main />
     </>
   );
 }

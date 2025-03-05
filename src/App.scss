@@ -53,3 +53,16 @@ button:hover {
   background-color: $orange;
   color: white;
 }
+
+.no-btn {
+  background-color: $barbie;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+}
+
+.no-btn:hover {
+  background-color: $wine;
+}
