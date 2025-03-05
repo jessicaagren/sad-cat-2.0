@@ -1,9 +1,10 @@
 import './App.scss';
+import FirstPageComponent from './components/FirstPageComponent/FirstPageComponent';
 
 function App() {
   return (
     <>
-      <h1>Sad cat wants Stephanie back</h1>
+      <FirstPageComponent />
     </>
   );
 }
