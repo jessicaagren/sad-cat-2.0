@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import './Button.scss';
 
 type ButtonProps = {
@@ -7,12 +8,18 @@ type ButtonProps = {
   onButtonClick: () => void;
 };
 
-function Button({ title, id, className, onButtonClick }: ButtonProps) {
-  return (
-    <button id={id} className={`Button ${className}`} onClick={onButtonClick}>
-      {title}
-    </button>
-  );
-}
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ title, id, className, onButtonClick }, ref) => {
+    return (
+      <button
+        id={id}
+        className={`Button ${className}`}
+        onClick={onButtonClick}
+        ref={ref}>
+        {title}
+      </button>
+    );
+  }
+);
 
 export default Button;

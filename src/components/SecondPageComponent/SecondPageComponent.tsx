@@ -1,19 +1,21 @@
+import { useRef } from 'react';
 import Button from '../Button/Button';
 import CatImageComponent from '../CatImageComponent/CatImageComponent';
 import './SecondPageComponent.scss';
 
 function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
-  const triggerExplosion = () => {
-    const noButton = document.getElementById('noBtn') as HTMLButtonElement;
+  const noButtonRef = useRef<HTMLButtonElement | null>(null);
 
-    if (noButton) {
-      noButton.classList.add('explode');
+  const triggerExplosion = () => {
+    if (noButtonRef.current) {
+      noButtonRef.current.classList.add('explode');
 
       setTimeout(() => {
-        noButton.remove();
+        noButtonRef.current?.remove();
       }, 500);
     }
   };
+
   return (
     <div className='SecondPageComponent'>
       <CatImageComponent mood='sad' />
@@ -33,6 +35,7 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
               title='Nej'
               className='no-button'
               onButtonClick={triggerExplosion}
+              ref={noButtonRef}
             />
           </div>
         </div>
