@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import './SecondPageComponent.scss';
 
 function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
@@ -12,20 +13,8 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
       }, 500);
     }
   };
-
   return (
     <div className='SecondPageComponent'>
-      <span id='arrow-span'>
-        <button onClick={onButtonClick}>
-          <img
-            src='/media/pixel-arrow-left.png'
-            className='arrow-left'
-            height='100px'
-            width='100px'
-            alt='Back Arrow'
-          />
-        </button>
-      </span>
       <img
         src='/media/sad-cat.png'
         className='cat-img'
@@ -38,14 +27,18 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
         <h1 id='heading-text'>Saknar du oss också?</h1>
         <div className='buttons-container'>
           <div className='button-wrapper'>
-            <button id='yesBtn' className='yes-btn' onClick={onButtonClick}>
-              Ja
-            </button>
+            <Button
+              title='Ja'
+              className='yes-button'
+              onButtonClick={onButtonClick}
+            />
           </div>
           <div className='button-wrapper'>
-            <button id='noBtn' className='no-btn' onClick={triggerExplosion}>
-              Nej
-            </button>
+            <Button
+              title='Nej'
+              className='no-button'
+              onButtonClick={triggerExplosion}
+            />
           </div>
         </div>
       </div>

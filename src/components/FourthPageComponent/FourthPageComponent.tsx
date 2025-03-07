@@ -3,17 +3,6 @@ import './FourthPageComponent.scss';
 function FourthPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   return (
     <div className='FourthPageComponent'>
-      <span id='arrow-span'>
-        <button onClick={onButtonClick}>
-          <img
-            src='/media/pixel-arrow-left.png'
-            className='arrow-left'
-            height='100px'
-            width='100px'
-            alt='Back Arrow'
-          />
-        </button>
-      </span>
       <div className='container'>
         <h1>Hoppas du mår bra!</h1>
         <span id='text-emoji-wrapper'>
