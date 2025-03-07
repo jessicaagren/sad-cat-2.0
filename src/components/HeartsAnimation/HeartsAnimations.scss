@@ -28,6 +28,16 @@
   }
 }
 
+#heartContainer {
+  max-height: 1vh;
+}
+
 .heart {
   animation: fallLeft linear forwards, fallRight linear forwards;
+  position: fixed;
+  font-size: 24px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  top: -30px;
 }

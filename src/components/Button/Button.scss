@@ -46,3 +46,13 @@ $lightyellow: #edd8a6;
 .no-btn.explode {
   animation: explode 0.5s ease-out forwards;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-wrapper {
+  position: relative;
+}
