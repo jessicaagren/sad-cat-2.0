@@ -20,19 +20,7 @@ body {
   background-color: $lightyellow;
   text-align: center;
   color: $black;
-}
-
-#arrow-span {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  gap: 5px;
-}
-
-.arrow-left {
-  height: 60px;
-  width: 60px;
+  overflow: hidden;
 }
 
 .question-container {
@@ -61,42 +49,6 @@ p {
   position: relative;
 }
 
-button {
-  padding: 12px 24px;
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  background-color: $lightyellow;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.yes-btn,
-.next-btn {
-  background-color: $orange;
-  color: white;
-}
-
-.no-btn {
-  background-color: $barbie;
-  color: white;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: transform 0.3s ease;
-}
-
-.no-btn:hover {
-  background-color: $wine;
-}
-
 @keyframes explode {
   0% {
     transform: scale(1) rotate(0deg);
@@ -110,10 +62,6 @@ button:hover {
     transform: scale(0) rotate(90deg);
     opacity: 0;
   }
-}
-
-.no-btn.explode {
-  animation: explode 0.5s ease-out forwards;
 }
 
 #heartContainer {
