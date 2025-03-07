@@ -1,4 +1,5 @@
 import Button from '../Button/Button';
+import CatImageComponent from '../CatImageComponent/CatImageComponent';
 import './SecondPageComponent.scss';
 
 function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
@@ -15,13 +16,7 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   };
   return (
     <div className='SecondPageComponent'>
-      <img
-        src='/media/sad-cat.png'
-        className='cat-img'
-        alt='Cat Image'
-        height='300px'
-        width='300px'
-      />
+      <CatImageComponent mood='sad' />
 
       <div className='question-container'>
         <h1 id='heading-text'>Saknar du oss också?</h1>

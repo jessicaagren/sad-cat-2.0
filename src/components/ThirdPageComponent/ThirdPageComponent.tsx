@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import './ThirdPageComponent.scss';
 import Button from '../Button/Button';
 import HeartsAnimation from '../HeartsAnimation/HeartsAnimation';
+import CatImageComponent from '../CatImageComponent/CatImageComponent';
 
 function ThirdPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   const heartContainerRef = useRef<HTMLDivElement | null>(null);
@@ -9,13 +10,7 @@ function ThirdPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   return (
     <div className='ThirdPageComponent'>
       <HeartsAnimation />
-      <img
-        src='/media/happy-cat.png'
-        className='cat-img'
-        alt='Cat Image'
-        height='300px'
-        width='300px'
-      />
+      <CatImageComponent mood='happy' />
       <div className='question-container'>
         <h1 id='heading-text'>Yippeeee!!!</h1>
         <div className='buttons-container'>
