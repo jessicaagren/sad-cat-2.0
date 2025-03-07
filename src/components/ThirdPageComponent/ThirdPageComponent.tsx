@@ -1,12 +1,9 @@
-import { useEffect, useRef } from 'react';
 import './ThirdPageComponent.scss';
 import Button from '../Button/Button';
 import HeartsAnimation from '../HeartsAnimation/HeartsAnimation';
 import CatImageComponent from '../CatImageComponent/CatImageComponent';
 
 function ThirdPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
-  const heartContainerRef = useRef<HTMLDivElement | null>(null);
-
   return (
     <div className='ThirdPageComponent'>
       <HeartsAnimation />
