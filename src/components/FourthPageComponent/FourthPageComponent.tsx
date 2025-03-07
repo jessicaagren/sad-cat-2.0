@@ -1,6 +1,7 @@
+import MusicPlayerContainer from '../MusicPlayerContainer/MusicPlayerContainer';
 import './FourthPageComponent.scss';
 
-function FourthPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
+function FourthPageComponent({}: { onButtonClick: () => void }) {
   return (
     <div className='FourthPageComponent'>
       <div className='container'>
@@ -13,17 +14,7 @@ function FourthPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
             alt='Flirty Emoji'
           />
         </span>
-        <div className='player-container'>
-          <iframe
-            style={{ borderRadius: '12px' }}
-            src='https://open.spotify.com/embed/playlist/5JevSFPTByDXDZzpVTmKYs?utm_source=generator'
-            width='100%'
-            height='352'
-            frameBorder='0'
-            allowFullScreen
-            allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
-            loading='lazy'></iframe>
-        </div>
+        <MusicPlayerContainer />
         <h2>Siri & Jessica</h2>
         <img
           src='/media/pixel-heart.png'
