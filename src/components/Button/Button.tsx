@@ -6,15 +6,17 @@ type ButtonProps = {
   id?: string;
   className?: string;
   onButtonClick: () => void;
+  onMouseEnter?: () => void;
 };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ title, id, className, onButtonClick }, ref) => {
+  ({ title, id, className, onButtonClick, onMouseEnter }, ref) => {
     return (
       <button
         id={id}
         className={`Button ${className}`}
         onClick={onButtonClick}
+        onMouseEnter={onMouseEnter}
         ref={ref}>
         {title}
       </button>

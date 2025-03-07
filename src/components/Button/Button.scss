@@ -30,13 +30,20 @@ $lightyellow: #edd8a6;
   color: white;
 }
 
+// .no-button {
+//   background-color: $barbie;
+//   color: white;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   transition: transform 0.3s ease;
+// }
 .no-button {
   background-color: $barbie;
   color: white;
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: absolute; // För att tillåta rörelse
   transition: transform 0.3s ease;
+  z-index: 1; // Se till att knappen ligger ovanpå andra element
 }
 
 .no-button:hover {
