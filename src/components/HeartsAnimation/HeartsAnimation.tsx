@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './HeartsAnimations.scss';
 
-const HeartsAnimation: React.FC = () => {
+const HeartsAnimation = () => {
   const heartContainerRef = useRef<HTMLDivElement | null>(null);
 
   const createHearts = () => {
