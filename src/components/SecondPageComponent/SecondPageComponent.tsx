@@ -16,6 +16,37 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
     }
   };
 
+  const moveNoButton = () => {
+    if (noButtonRef.current) {
+      const button = noButtonRef.current;
+      const radius = 100; // Avstånd som knappen ska hoppa
+      const randomAngle = Math.random() * 2 * Math.PI; // Slumptal för vinkel
+      const randomX = radius * Math.cos(randomAngle); // X-koordinat
+      const randomY = radius * Math.sin(randomAngle); // Y-koordinat
+
+      // Hämta knappen och dess aktuella position
+      const rect = button.getBoundingClientRect();
+
+      // Beräkna nya positioner, säkerställ att knappen stannar inom fönstrets gränser
+      const newLeft = Math.min(
+        Math.max(rect.left + randomX, 0),
+        window.innerWidth - rect.width
+      );
+      const newTop = Math.min(
+        Math.max(rect.top + randomY, 0),
+        window.innerHeight - rect.height
+      );
+
+      // Flytta knappen till den nya positionen
+      button.style.transform = `translate(${newLeft}px, ${newTop}px)`;
+    }
+  };
+
+  const handleMouseEnter = () => {
+    console.log('Mouse entered');
+    moveNoButton();
+  };
+
   return (
     <div className='SecondPageComponent'>
       <CatImageComponent mood='sad' />
@@ -36,11 +67,11 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
               className='no-button'
               onButtonClick={triggerExplosion}
               ref={noButtonRef}
+              onMouseEnter={handleMouseEnter}
             />
           </div>
         </div>
       </div>
-      <div id='heartContainer'></div>
     </div>
   );
 }
