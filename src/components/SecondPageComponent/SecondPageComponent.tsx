@@ -1,10 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Button from '../Button/Button';
 import CatImageComponent from '../CatImageComponent/CatImageComponent';
 import './SecondPageComponent.scss';
 
 function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   const noButtonRef = useRef<HTMLButtonElement | null>(null);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
 
   const triggerExplosion = () => {
     if (noButtonRef.current) {
@@ -17,34 +18,13 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   };
 
   const moveNoButton = () => {
-    if (noButtonRef.current) {
-      const button = noButtonRef.current;
-      const radius = 100; // Avstånd som knappen ska hoppa
-      const randomAngle = Math.random() * 2 * Math.PI; // Slumptal för vinkel
-      const randomX = radius * Math.cos(randomAngle); // X-koordinat
-      const randomY = radius * Math.sin(randomAngle); // Y-koordinat
+    const radius = 150;
+    const angle = Math.random() * Math.PI * 2;
 
-      // Hämta knappen och dess aktuella position
-      const rect = button.getBoundingClientRect();
+    const newX = radius * Math.cos(angle);
+    const newY = radius * Math.sin(angle);
 
-      // Beräkna nya positioner, säkerställ att knappen stannar inom fönstrets gränser
-      const newLeft = Math.min(
-        Math.max(rect.left + randomX, 0),
-        window.innerWidth - rect.width
-      );
-      const newTop = Math.min(
-        Math.max(rect.top + randomY, 0),
-        window.innerHeight - rect.height
-      );
-
-      // Flytta knappen till den nya positionen
-      button.style.transform = `translate(${newLeft}px, ${newTop}px)`;
-    }
-  };
-
-  const handleMouseEnter = () => {
-    console.log('Mouse entered');
-    moveNoButton();
+    setOffset({ x: newX, y: newY });
   };
 
   return (
@@ -67,7 +47,10 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
               className='no-button'
               onButtonClick={triggerExplosion}
               ref={noButtonRef}
-              onMouseEnter={handleMouseEnter}
+              onMouseEnter={moveNoButton}
+              style={{
+                transform: `translate(${offset.x}px, ${offset.y}px)`,
+              }}
             />
           </div>
         </div>
