@@ -32,7 +32,7 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
       <CatImageComponent mood='sad' />
 
       <div className='question-container'>
-        <h1 id='heading-text'>Saknar du oss också?</h1>
+        <h1>Saknar du oss också?</h1>
         <div className='buttons-container'>
           <div className='button-wrapper'>
             <Button

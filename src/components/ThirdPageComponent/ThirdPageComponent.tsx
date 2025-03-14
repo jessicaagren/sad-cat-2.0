@@ -9,7 +9,7 @@ function ThirdPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
       <HeartsAnimation />
       <CatImageComponent mood='happy' />
       <div className='question-container'>
-        <h1 id='heading-text'>Yippeeee!!!</h1>
+        <h1>Yippeeee!!!</h1>
         <div className='buttons-container'>
           <div className='button-wrapper'>
             <Button
