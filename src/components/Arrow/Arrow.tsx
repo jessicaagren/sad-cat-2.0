@@ -7,13 +7,7 @@ type ArrowProps = {
 function Arrow({ onButtonClick }: ArrowProps) {
   return (
     <button onClick={onButtonClick} className='Arrow'>
-      <img
-        src='/media/pixel-arrow-left.png'
-        className='arrow-left'
-        height='100px'
-        width='100px'
-        alt='Back Arrow'
-      />
+      <img src='/media/pixel-arrow-left.png' alt='Back Arrow' />
     </button>
   );
 }
