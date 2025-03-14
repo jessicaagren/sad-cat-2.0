@@ -1,4 +1,6 @@
+import FlirtyEmoji from '../FlirtyEmoji/FlirtyEmoji';
 import MusicPlayerContainer from '../MusicPlayerContainer/MusicPlayerContainer';
+import PixelHeart from '../PixelHeart/PixelHeart';
 import './FourthPageComponent.scss';
 
 function FourthPageComponent({}: { onButtonClick: () => void }) {
@@ -8,20 +10,11 @@ function FourthPageComponent({}: { onButtonClick: () => void }) {
         <h1>Hoppas du mår bra!</h1>
         <span id='text-emoji-wrapper'>
           <p>Lyssna på den här och tänk på oss</p>
-          <img
-            id='flirty-emoji'
-            src='/media/flirty-emoji.png'
-            alt='Flirty Emoji'
-          />
+          <FlirtyEmoji />
         </span>
         <MusicPlayerContainer />
         <h2>Siri & Jessica</h2>
-        <img
-          src='/media/pixel-heart.png'
-          height='40px'
-          width='40px'
-          alt='Heart Icon'
-        />
+        <PixelHeart />
       </div>
     </div>
   );
