@@ -6,10 +6,11 @@ import {
   useNavigate,
 } from 'react-router-dom';
 import Arrow from './components/Arrow/Arrow';
-import FirstPageComponent from './routes/FirstPage/FirstPage';
-import SecondPageComponent from './routes/SecondPage/SecondPage';
-import ThirdPageComponent from './routes/ThirdPage/ThirdPage';
-import FourthPageComponent from './routes/FourthPage/FourthPage';
+
+import FirstPage from './routes/FirstPage/FirstPage';
+import SecondPage from './routes/SecondPage/SecondPage';
+import ThirdPage from './routes/ThirdPage/ThirdPage';
+import FourthPage from './routes/FourthPage/FourthPage';
 
 const NavigationArrow = () => {
   const navigate = useNavigate();
@@ -46,7 +47,7 @@ function App() {
         <Route
           path='/'
           element={
-            <FirstPageComponent
+            <FirstPage
               onButtonClick={() => (window.location.href = '/page2')}
             />
           }
@@ -54,7 +55,7 @@ function App() {
         <Route
           path='/page2'
           element={
-            <SecondPageComponent
+            <SecondPage
               onButtonClick={() => (window.location.href = '/page3')}
             />
           }
@@ -62,7 +63,7 @@ function App() {
         <Route
           path='/page3'
           element={
-            <ThirdPageComponent
+            <ThirdPage
               onButtonClick={() => (window.location.href = '/page4')}
             />
           }
@@ -70,7 +71,7 @@ function App() {
         <Route
           path='/page4'
           element={
-            <FourthPageComponent
+            <FourthPage
               onButtonClick={() => (window.location.href = '/page3')}
             />
           }
