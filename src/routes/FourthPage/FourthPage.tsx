@@ -1,11 +1,11 @@
-import FlirtyEmoji from '../FlirtyEmoji/FlirtyEmoji';
-import MusicPlayerContainer from '../MusicPlayerContainer/MusicPlayerContainer';
-import PixelHeart from '../PixelHeart/PixelHeart';
-import './FourthPageComponent.scss';
+import FlirtyEmoji from '../../components/FlirtyEmoji/FlirtyEmoji';
+import MusicPlayerContainer from '../../components/MusicPlayerContainer/MusicPlayerContainer';
+import PixelHeart from '../../components/PixelHeart/PixelHeart';
+import './FourthPage.scss';
 
 function FourthPageComponent({}: { onButtonClick: () => void }) {
   return (
-    <div className='FourthPageComponent'>
+    <div className='FourthPage'>
       <div className='container'>
         <h1>Hoppas du mår bra!</h1>
         <span id='text-emoji-wrapper'>

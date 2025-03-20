@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import './HeartsAnimations.scss';
+import './HeartsAnimation.scss';
 
 const HeartsAnimation = () => {
   const heartContainerRef = useRef<HTMLDivElement | null>(null);

@@ -1,11 +1,11 @@
-import './ThirdPageComponent.scss';
-import Button from '../Button/Button';
-import HeartsAnimation from '../HeartsAnimation/HeartsAnimation';
-import CatImageComponent from '../CatImageComponent/CatImageComponent';
+import './ThirdPage.scss';
+import Button from '../../components/Button/Button';
+import HeartsAnimation from '../../components/HeartsAnimation/HeartsAnimation';
+import CatImageComponent from '../../components/CatImageComponent/CatImageComponent';
 
 function ThirdPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   return (
-    <div className='ThirdPageComponent'>
+    <div className='ThirdPage'>
       <HeartsAnimation />
       <CatImageComponent mood='happy' />
       <div className='question-container'>

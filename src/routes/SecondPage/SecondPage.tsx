@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import Button from '../Button/Button';
-import CatImageComponent from '../CatImageComponent/CatImageComponent';
-import './SecondPageComponent.scss';
+import Button from '../../components/Button/Button';
+import CatImageComponent from '../../components/CatImageComponent/CatImageComponent';
+import './SecondPage.scss';
 
 function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   const noButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -28,7 +28,7 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   };
 
   return (
-    <div className='SecondPageComponent'>
+    <div className='SecondPage'>
       <CatImageComponent mood='sad' />
 
       <div className='question-container'>
