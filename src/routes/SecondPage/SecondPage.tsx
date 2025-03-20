@@ -3,7 +3,7 @@ import Button from '../../components/Button/Button';
 import CatImageComponent from '../../components/CatImageComponent/CatImageComponent';
 import './SecondPage.scss';
 
-function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
+function SecondPage({ onButtonClick }: { onButtonClick: () => void }) {
   const noButtonRef = useRef<HTMLButtonElement | null>(null);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
@@ -59,4 +59,4 @@ function SecondPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   );
 }
 
-export default SecondPageComponent;
+export default SecondPage;

@@ -1,7 +1,12 @@
+import { JSX } from 'react';
 import Button from '../../components/Button/Button';
 import './FirstPage.scss';
 
-function FirstPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
+function FirstPage({
+  onButtonClick,
+}: {
+  onButtonClick: () => void;
+}): JSX.Element {
   return (
     <div className='FirstPage'>
       <h1>Stephanie!!!!!!! We miss you!!!!</h1>
@@ -14,4 +19,4 @@ function FirstPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   );
 }
 
-export default FirstPageComponent;
+export default FirstPage;

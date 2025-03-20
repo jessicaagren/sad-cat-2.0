@@ -3,7 +3,7 @@ import MusicPlayerContainer from '../../components/MusicPlayerContainer/MusicPla
 import PixelHeart from '../../components/PixelHeart/PixelHeart';
 import './FourthPage.scss';
 
-function FourthPageComponent({}: { onButtonClick: () => void }) {
+function FourthPage({}: { onButtonClick: () => void }) {
   return (
     <div className='FourthPage'>
       <div className='container'>
@@ -20,4 +20,4 @@ function FourthPageComponent({}: { onButtonClick: () => void }) {
   );
 }
 
-export default FourthPageComponent;
+export default FourthPage;

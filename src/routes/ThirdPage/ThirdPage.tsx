@@ -3,7 +3,7 @@ import Button from '../../components/Button/Button';
 import HeartsAnimation from '../../components/HeartsAnimation/HeartsAnimation';
 import CatImageComponent from '../../components/CatImageComponent/CatImageComponent';
 
-function ThirdPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
+function ThirdPage({ onButtonClick }: { onButtonClick: () => void }) {
   return (
     <div className='ThirdPage'>
       <HeartsAnimation />
@@ -24,4 +24,4 @@ function ThirdPageComponent({ onButtonClick }: { onButtonClick: () => void }) {
   );
 }
 
-export default ThirdPageComponent;
+export default ThirdPage;
