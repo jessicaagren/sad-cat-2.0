@@ -17,7 +17,10 @@ function SecondPage({ onButtonClick }: { onButtonClick: () => void }) {
     }
   };
 
+  const [moveCount, setMoveCount] = useState(0);
+
   const moveNoButton = () => {
+    if (moveCount >= 5) return;
     const radius = 150;
     const angle = Math.random() * Math.PI * 2;
 
@@ -25,6 +28,7 @@ function SecondPage({ onButtonClick }: { onButtonClick: () => void }) {
     const newY = radius * Math.sin(angle);
 
     setOffset({ x: newX, y: newY });
+    setMoveCount((prev) => prev + 1);
   };
 
   return (
